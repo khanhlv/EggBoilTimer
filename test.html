@@ -1,168 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="dns-prefetch" href="//www.googletagservices.com" />
-		<link rel="dns-prefetch" href="//www.googletagmanager.com" />
-		<link rel="dns-prefetch" href="//www.google-analytics.com" />
+<html>
+
+	<body style='font-size:40px'>
+		<button onclick="test()">Start</button>
 		
-        <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Hẹn giờ luộc trứng Online - Egg Boil Timer Online</title>
-        <meta name="description" content="Đồng hồ đếm ngược luộc trứng này giúp bạn nấu chín trứng một cách hoàn hảo! Chọn tùy chọn của bạn: từ mềm đến cứng và chúng tôi sẽ thông báo cho bạn khi chúng sẵn sàng." />
-		<meta NAME="keywords" CONTENT="Hẹn giờ luộc trứng Online, Hẹn giờ luộc trứng, luộc trứng, trứng, Egg, Egg Boil Timer, Boil Timer Online, Egg Boil, hen gio luoc trung, luoc trung, trung,">
-		
-		<meta property="og:type" content="website" />
-		<meta property="og:title" content="Hẹn giờ luộc trứng Online - Egg Boil Timer Online" />
-		
-		<link rel="canonical" href="https://eggboil.codethoi.com/" />
-		<link rel="apple-touch-icon" sizes="180x180" href="https://codethoi.com/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="https://codethoi.com/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="https://codethoi.com/favicon-16x16.png">
-        <link href="assets/css/styles.css" rel="stylesheet" type="text/css" media="all" />
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBH4WY7BBJ"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
 
-		  gtag('config', 'G-LBH4WY7BBJ');
+			var music = new Audio("https://eggboil.codethoi.com/assets/sound/egg-timer-sound.mp3");
+		
+			function test() {
+				music.play();
+			}
+			
 		</script>
-    </head>
+	</body>
 
-    <body class="bg-gray-100">
-        <div id="app">
-            <div id="content-container" class="container px-0 sm:px-4 xl:px-0 mx-auto mt-5">
-                <div id="content">
-                    
-                    <h1 id="content-title" class="capitalize">Hẹn Giờ Luộc Trứng</h1>
-
-                    <div id="content-body">
-                        <div id="egg-choice-container">
-                            <div id="egg-choice-table">
-                                <div class="egg-option">
-                                    <div class="egg-type-title">Lỏng</div>
-                                    <div class="egg-boil-time">6 phút</div>
-                                    <img src="assets/img/6-min-egg.png"  width="110" height="147" />
-                                    <input type="radio" name="egg-choice" value="0.1" />
-                                </div>
-                                <div class="egg-option">
-                                    <div class="egg-type-title">Mềm lỏng</div>
-                                    <div class="egg-boil-time">8 phút</div>
-                                    <img src="assets/img/8-min-egg.png"  width="110" height="147" />
-                                    <input type="radio" name="egg-choice" value="8" />
-                                </div>
-                                <div class="egg-option">
-                                    <div class="egg-type-title">Mềm</div>
-                                    <div class="egg-boil-time">10 phút</div>
-                                    <img src="assets/img/10-min-egg.png"  width="110" height="147" />
-                                    <input type="radio" name="egg-choice" value="10" />
-                                </div>
-                                <div class="egg-option">
-                                    <div class="egg-type-title">Nửa cứng</div>
-                                    <div class="egg-boil-time">12 phút</div>
-                                    <img src="assets/img/12-min-egg.png"  width="110" height="147" />
-                                    <input type="radio" name="egg-choice" value="12" checked="" />
-                                </div>
-                                <div class="egg-option">
-                                    <div class="egg-type-title">Cứng</div>
-                                    <div class="egg-boil-time">14 phút</div>
-                                    <img src="assets/img/14-min-egg.png"  width="110" height="147" />
-                                    <input type="radio" name="egg-choice" value="14" />
-                                </div>
-                            </div>
-
-                            <div id="egg-timer-instructions">
-                                <h2>Hướng dẫn</h2>
-                                <ol class="list-decimal list-inside">
-                                    <li>Chọn cách bạn muốn trứng của bạn ở trên.</li>
-                                    <li>Đổ nước vào nồi, vặn nhỏ lửa và đun sôi.</li>
-                                    <li>Khi nước sôi, vặn nhỏ lửa.</li>
-                                    <li>Cho trứng vào nước, vặn nhỏ lửa đun đến khi nước sôi trở lại.</li>
-                                    <li>Bắt đầu hẹn giờ bằng cách nhấp vào <b>&#39;Bắt đầu hẹn giờ&#39;</b> bên dưới.</li>
-                                    <li>Khi hẹn giờ xong, nó sẽ đổ chuông và hiển thị thông báo. Vớt trứng ra khỏi nước sôi và cho vào nước lạnh để nguội.</li>
-                                    <li>Thưởng thức trứng luộc của bạn!</li>
-                                </ol>
-                            </div>
-
-                            <button id="egg-choice-btn">Bắt đầu hẹn giờ</button>
-                            <button id="egg-reset-btn">Đặt lại</button>
-                        </div>
-
-                        <div id="egg-timer-container">
-                            <canvas id="egg-timer-bg" width="400" height="400"></canvas>
-                            <canvas id="egg-timer-canvas" width="400" height="400"></canvas>
-                            <canvas id="egg-timer-bg-small" width="300" height="300"></canvas>
-                            <canvas id="egg-timer-canvas-small" width="300" height="300"></canvas>
-                        </div>
-
-                       
-                    </div>
-                    
-                </div>
-                <div id="content" class="content-second">
-                    <div id="content-body">
-                        <h2 class="mt-8">Sử dụng đồng hồ đếm ngược này để biết thời gian luộc trứng</h2>
-
-                        <div class="max-w-3xl">
-                            <h3>Mất bao lâu để luộc một quả trứng?</h3>
-                            <p>
-                                Với dụng cụ này, bạn có thể nướng trứng thành một miếng bánh! Sử dụng đồng hồ đếm ngược này để có được những quả trứng luộc chín mềm hoặc cứng hoàn hảo. Sau khi thử nghiệm và nghiên cứu kỹ lưỡng, chúng tôi đã đưa ra danh sách thời gian bạn nên luộc trứng dựa trên loại trứng bạn muốn. Một số người thích lòng đỏ hoặc lòng trắng trứng rất mềm và lỏng, trong khi những người khác lại thích lòng đỏ kem, cứng. Tất cả đều có thể.
-                            </p>
-                            <table id="egg-time-table">
-                                <tbody>
-                                    <tr>
-                                        <th>Kiểu</th>
-                                        <th>Thời gian</th>
-                                        <th>Hình ảnh ví dụ</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Lỏng</td>
-                                        <td>6 phút</td>
-                                        <td><img src="assets/img/6-min-egg.png"  width="110" height="147" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mềm lỏng</td>
-                                        <td>8 phút</td>
-                                        <td><img src="assets/img/8-min-egg.png"  width="110" height="147" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mềm</td>
-                                        <td>10 phút</td>
-                                        <td><img src="assets/img/10-min-egg.png"  width="110" height="147" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Nửa cứng</td>
-                                        <td>12 phút</td>
-                                        <td><img src="assets/img/12-min-egg.png"  width="110" height="147" /></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cứng</td>
-                                        <td>14 phút</td>
-                                        <td><img src="assets/img/14-min-egg.png"  width="110" height="147" /></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <h3>Bạn có thể sử dụng trứng cho mọi thứ!</h3>
-                            <p>
-                                Trứng không chỉ có giá cả phải chăng mà còn được ăn rất nhiều. Những người đam mê sức khỏe ăn chúng vì bổ dưỡng và tốt cho sức khỏe. Trứng chứa ít calo và chất béo, đồng thời rất no. Những người tập thể hình và vận động viên yêu thích chúng vì các protein có trong lòng trắng trứng. Tốt cho sự phát triển của cơ bắp. Chúng có thể được ăn vào bữa sáng, bữa trưa và bữa tối hoặc như một bữa ăn nhẹ
-                                <br />
-                                Họ chỉ có hương vị thực sự tốt! Kết hợp trứng với thịt xông khói và bạn đã có cho mình một bữa ăn ngon.
-                            </p>
-                            <h3>Làm thế nào để sử dụng công cụ này?</h3>
-                            <p>
-                                Chỉ cần làm theo hướng dẫn ở trên bộ hẹn giờ để sử dụng bộ hẹn giờ. Bạn thậm chí không cần phải nhớ để nấu trứng luộc trong bao lâu, chỉ cần sử dụng công cụ này. Nếu bạn muốn dừng bộ đếm thời gian hiện tại, hãy nhấp vào nút 'Đặt lại'. Sau đó, bạn có thể chọn một loại trứng khác và bắt đầu lại.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <script src="assets/js/EggBoilTimer.js"></script>
-
-        
-        
-    </body>
 </html>
+

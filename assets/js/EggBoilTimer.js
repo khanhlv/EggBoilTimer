@@ -77,7 +77,6 @@
                         t && t.parentNode.removeChild(t), e.style.background = "#f5f5f5", e.insertAdjacentHTML("beforeend", '<div class="selected-egg-option"><img src="assets/img/checkmark.png">Chọn</div>')
                     }
                     document.getElementById("egg-choice-btn").addEventListener("click", (function() {
-						s.play();
                         y(document.querySelector('input[name="egg-choice"]:checked').value, null)
                     })), document.getElementById("egg-reset-btn").addEventListener("click", (function() {
                         b()
