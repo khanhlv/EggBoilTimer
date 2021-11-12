@@ -37,14 +37,10 @@
 
 			document.body.addEventListener('click', tapped, false)
 
-			
-
+		
 			var stop = function() {
 
 				music.pause()
-
-				loop = null
-
 				document.body.removeEventListener('touchstart', tapped, false)
 
 				document.body.removeEventListener('click', tapped, false)
