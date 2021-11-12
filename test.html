@@ -7,6 +7,18 @@
 
 			var music = new Audio("assets/sound/egg-timer-sound.mp3");
 		
+			var tapped = function() {
+				alert('3333');
+				setTimeout(function() {
+
+					alert('1111111111');
+					music.play()
+
+				}, 2000)
+			}
+			
+			document.body.addEventListener('touchstart', tapped, false)
+		
 			function test() {
 				music.pause();
 				music.currentTime = 0;
