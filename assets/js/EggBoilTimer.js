@@ -44,8 +44,6 @@
                     function y(n, r) {
 						s.pause();
 						s.currentTime = 0;
-						alert('11111');
-						alert(s);
                         if (!u) {
                             u = !0, g.setTransform(1, 0, 0, 1, 0, 0);
                             var o = 60 * n + r,
@@ -54,7 +52,7 @@
                             var l = new Date;
                             a = setInterval((function() {
                                 var n = (new Date - l) / 1e3;
-                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), s.play(), alert('222'), function(n) {
+                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), s.play(), function(n) {
                                     g.setTransform(1, 0, 0, 1, 0, 0), g.save(), g.translate(0, .25 * e), g.rect(0, 0, t, .5 * e), g.globalAlpha = .8, g.fillStyle = "white", g.fill();
                                     var r = .0875 * t;
                                     g.fillStyle = "black", g.textAlign = "center", g.textBaseline = "middle", g.font = "bold " + r + "px Arial", g.fillText(n, t / 2, .25 * e), g.restore()
@@ -79,6 +77,7 @@
                         t && t.parentNode.removeChild(t), e.style.background = "#f5f5f5", e.insertAdjacentHTML("beforeend", '<div class="selected-egg-option"><img src="assets/img/checkmark.png">Chọn</div>')
                     }
                     document.getElementById("egg-choice-btn").addEventListener("click", (function() {
+						s.play();
                         y(document.querySelector('input[name="egg-choice"]:checked').value, null)
                     })), document.getElementById("egg-reset-btn").addEventListener("click", (function() {
                         b()
