@@ -23,35 +23,24 @@
 				messagediv.innerHTML = "Music starts in 2 seconds..."
 
 				setTimeout(function() {
-
 					messagediv.innerHTML = "Music playing. <button onclick='stop()'>Stop</button>"
-
 					music.pause();
 
 				}, 1000)
-
-				
 			}
 
 			document.body.addEventListener('touchstart', tapped, false)
-
 			document.body.addEventListener('click', tapped, false)
-
 		
 			var stop = function() {
-
 				music.pause()
 				document.body.removeEventListener('touchstart', tapped, false)
-
 				document.body.removeEventListener('click', tapped, false)
-
 			}
 
 			
 			setTimeout(function() {
-
 				messagediv.innerHTML = "Music playing. <button onclick='stop()'>Stop</button>"
-
 				music.play();
 
 			}, 5000)
