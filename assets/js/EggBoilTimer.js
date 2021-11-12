@@ -42,6 +42,8 @@
                     }
 
                     function y(n, r) {
+						s.pause();
+						s.currentTime = 0
                         if (!u) {
                             u = !0, g.setTransform(1, 0, 0, 1, 0, 0);
                             var o = 60 * n + r,
@@ -75,10 +77,8 @@
                         t && t.parentNode.removeChild(t), e.style.background = "#f5f5f5", e.insertAdjacentHTML("beforeend", '<div class="selected-egg-option"><img src="assets/img/checkmark.png">Chọn</div>')
                     }
                     document.getElementById("egg-choice-btn").addEventListener("click", (function() {
-						s.pause();
                         y(document.querySelector('input[name="egg-choice"]:checked').value, null)
                     })), document.getElementById("egg-reset-btn").addEventListener("click", (function() {
-						s.pause()
                         b()
                     })), document.querySelectorAll(".egg-option").forEach((function(e) {
                         e.addEventListener("click", (function(e) {
