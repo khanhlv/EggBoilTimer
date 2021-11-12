@@ -1,0 +1,22 @@
+<html>
+
+	<body style='font-size:40px'>
+		<button onclick="test()">Start</button>
+		
+		<script>
+
+			var music = new Audio("https://eggboil.codethoi.com/assets/sound/egg-timer-sound.mp3");
+			
+			setTimeout(function() {
+				music.play();
+			}, 5000);
+			
+			function test() {
+				music.pause()
+			}
+			
+		</script>
+	</body>
+
+</html>
+
