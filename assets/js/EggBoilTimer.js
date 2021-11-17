@@ -55,7 +55,7 @@
                             var l = new Date;
                             a = setInterval((function() {
                                 var n = (new Date - l) / 1e3;
-                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), sound.play();, function(n) {
+                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), sound.play(), function(n) {
                                     g.setTransform(1, 0, 0, 1, 0, 0), g.save(), g.translate(0, .25 * e), g.rect(0, 0, t, .5 * e), g.globalAlpha = .8, g.fillStyle = "white", g.fill();
                                     var r = .0875 * t;
                                     g.fillStyle = "black", g.textAlign = "center", g.textBaseline = "middle", g.font = "bold " + r + "px Arial", g.fillText(n, t / 2, .25 * e), g.restore()
