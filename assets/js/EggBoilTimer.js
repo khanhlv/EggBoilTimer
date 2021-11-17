@@ -13,6 +13,11 @@
                     window.innerWidth < 500 && (e = 300, t = 300, o.style.display = "block", i.style.display = "block", l.style.display = "none", c.style.display = "none", n = "egg-timer-bg-small", r = "egg-timer-canvas-small");
                     var a, u = !1,
                         s = new Audio("assets/sound/egg-timer-sound.mp3");
+						
+					var sound = new Howl({
+					  src: ['assets/sound/egg-timer-sound.mp3']
+					});
+			
                     ! function() {
                         var r = document.getElementById(n).getContext("2d"),
                             o = new Image;
@@ -42,8 +47,6 @@
                     }
 
                     function y(n, r) {
-						s.pause();
-						s.currentTime = 0;
                         if (!u) {
                             u = !0, g.setTransform(1, 0, 0, 1, 0, 0);
                             var o = 60 * n + r,
@@ -52,7 +55,7 @@
                             var l = new Date;
                             a = setInterval((function() {
                                 var n = (new Date - l) / 1e3;
-                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), s.play(), function(n) {
+                                n > o ? (clearInterval(a), g.setTransform(1, 0, 0, 1, 0, 0), v(), sound.play();, function(n) {
                                     g.setTransform(1, 0, 0, 1, 0, 0), g.save(), g.translate(0, .25 * e), g.rect(0, 0, t, .5 * e), g.globalAlpha = .8, g.fillStyle = "white", g.fill();
                                     var r = .0875 * t;
                                     g.fillStyle = "black", g.textAlign = "center", g.textBaseline = "middle", g.font = "bold " + r + "px Arial", g.fillText(n, t / 2, .25 * e), g.restore()
@@ -66,7 +69,7 @@
                     }
 
                     function b() {
-                        g.setTransform(1, 0, 0, 1, 0, 0), clearInterval(a), s.pause(), s.currentTime = 0, f(), v(), d.removeEventListener("click", p), u = !1
+                        g.setTransform(1, 0, 0, 1, 0, 0), clearInterval(a), sound.stop(), sound.seek(0), f(), v(), d.removeEventListener("click", p), u = !1
                     }
 
                     function k(e) {
