@@ -1,62 +1,24 @@
 
 <html>
-
-	<body style='font-size:40px'>
-
-		<div id=lockeddiv style='font-style:italic'></div>
-
-		<div id=messagediv style='font-style:italic'>Tap for music.</div>
+	<script src="assets/js/howler.js"></script>
+	
+	<body>
 
 		<script>
+			var sound = new Howl({
+			  src: ['https://eggboil.codethoi.com/assets/sound/egg-timer-sound.mp3']
+			});
 
-			var music = new Audio("http://curtastic.com/nightmare.mp3")
+			sound.play();
 
-
-
-			var tapped = function() {
-
-				messagediv.innerHTML = "tapped"
-
-			
-				// We should be able to play music delayed now (not during the tap event).
-
-				messagediv.innerHTML = "Music starts in 2 seconds..."
-
-				setTimeout(function() {
-					messagediv.innerHTML = "Music playing. <button onclick='stop()'>Stop</button>"
-					music.pause();
-
-				}, 1000)
-			}
-
-			document.body.addEventListener('touchstart', tapped, false)
-			document.body.addEventListener('click', tapped, false)
-		
-			var stop = function() {
-				music.pause()
-				document.body.removeEventListener('touchstart', tapped, false)
-				document.body.removeEventListener('click', tapped, false)
-			}
-
-			
 			setTimeout(function() {
-				messagediv.innerHTML = "Music playing. <button onclick='stop()'>Stop</button>"
-				music.play();
-
-			}, 5000)
-
-			
+				alert('Play');
+				
+				sound.play();
+			}, 5000);
 		</script>
 
-		<div style='height:110vh;padding:2vh;background:#EFE'>
-
-			On Safari audio will start on the first tap anywhere.
-
-			On Chrome it will try to determine if the user has interacted much with this page or this domain, before playing.
-
-			On desktop Chrome, a keyboard press should suffice.
-
-		</div>
+		
 
 	</body>
 
